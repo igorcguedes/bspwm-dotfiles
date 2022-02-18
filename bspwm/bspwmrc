@@ -13,8 +13,8 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc rule -a Screenkey manage=off
-bspc rule -a xfce4-terminal desktop='^3'
-spc rule -a Google-chrome desktop='^4'
+bspc rule -a Kitty desktop='^3'
+spc rule -a firefox desktop='^4'
 bspc rule -a spotify desktop='^6'
 #bspc rule -a Whatsapp state=floating
 
