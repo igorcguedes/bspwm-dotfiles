@@ -59,7 +59,7 @@ border-bottom-color = ${colors.background}
 line-size = 1
 wm-restack = bspwm
 
-modules-left = round-left bspwm round-right empty-space round-left polywins round-right mpd_i mpd
+modules-left = round-left bspwm round-right empty-space mpd_i mpd
 modules-center = title
 modules-right = pulseaudio round-left cpu round-right  temperature wlan mem xbacklight round-left time  round-right powermenu
 font-0 = JetBrainsMono Nerd Font:style=Bold:pixelsize=11;3
@@ -133,7 +133,7 @@ reverse-scroll = false
 format = <label-state>
 
 ws-icon-0 = I;%{F#e3a5f5}
-ws-icon-1 = II;%{F#e3a5f5}
+ws-icon-1 = II;%{F#FFFFF}
 ws-icon-2 = III;%{F#95e1d3} 
 ws-icon-3 = IV;%{F#ff9b93}     
 ws-icon-4 = V;%{F#E4BF7B}
@@ -235,8 +235,8 @@ label-padding = 1
 
 [module/updates]
 type = custom/script
-;exec = doas xbps-install -S > /dev/null 2>&1; xbps-updates
-exec = echo "TERROO"
+exec = doas xbps-install -S > /dev/null 2>&1; xbps-updates
+;exec = echo "TERROO"
 format = <label>
 interval = 4600 
 ;label =  %output%  
