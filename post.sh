@@ -26,3 +26,4 @@ sudo reboot
 #screenshot=flameshot
 #app-launcher=rofi
 #office=open-office.appimg
+#aria2 - torrent
