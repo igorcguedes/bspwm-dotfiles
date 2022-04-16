@@ -9,9 +9,10 @@ Principal fonte: Jetbrains Nerd Font
 
 Terminal: ST
 
-
 IDE: Neovim + NVCHAD
-File manager: Ranger + thunar
+
+File manager: Nautilus + thunar
+
 ![image](https://user-images.githubusercontent.com/48987652/161431162-24ba91a8-e238-4035-847d-57f00204ab95.png)
 
 Polybar:
@@ -21,24 +22,30 @@ Polybar:
 
 Instalar temas em:
 
-/usr/share/themes
+    /usr/share/themes
 
 Icones:
 
-/usr/share/icons
+    /usr/share/icons
 
 Fontes:
 
 Apague as antigas para não ter risco de duplicar.
 
-rm -rf /usr/share/fonts
+    rm -rf /usr/share/fonts
 
 Copie as novas:
 
-cp /dotfiles/fonts usr/share/fonts
+    cp /dotfiles/fonts usr/share/fonts
 
 Atualize o cache de fontes:
 
 Em breve script para instalacão.
 
-fc-cache -fv
+     fc-cache -fv
+
+Deps:
+Wmctrl
+xprop
+slop
+picom
