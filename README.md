@@ -45,7 +45,8 @@ Em breve script para instalacão.
      fc-cache -fv
 
 Deps:
-Wmctrl
-xprop
-slop
-picom
+           
+           Wmctrl
+           xprop
+           slop
+           picom
