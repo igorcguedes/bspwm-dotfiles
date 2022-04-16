@@ -1,4 +1,6 @@
 #! /bin/sh
+#set keyboard settings
+setxkbmap -layout us -variant intl
 
 # set monitor settings
 xrandr --output DP-2 --primary --mode 2560x1440 --rotate normal --output HDMI-0 --mode 2560x1440 --rotate left --left-of DP-2
@@ -15,13 +17,14 @@ bspc config split_ratio           0.50
 bspc config gapless_monocle       true
 bspc config focus_follows_pointer true
 
+#set main border color
 bspc config focused_border_color "#BF616A"
 bspc config normal_border_color "#353b45"
 
 # autostart up applications 
 ~/.config/polybar/launch.sh &
 picom & 
-feh --bg-fill ~/Pictures/wall/neon.png &
+feh --bg-fill ~/pictures/neon.png &
 xrdb merge ~/.Xresources &
 flameshot &
 sxhkd 
