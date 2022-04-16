@@ -59,19 +59,13 @@ border-bottom-color = ${colors.background}
 line-size = 1
 wm-restack = bspwm
 
-modules-left = round-left bspwm round-right empty-space mpd_i mpd
-modules-center = title
-modules-right = pulseaudio round-left cpu round-right  temperature wlan mem xbacklight round-left time  round-right powermenu
-font-0 = JetBrainsMono Nerd Font:style=Bold:pixelsize=11;3
+modules-left = round-left bspwm round-right empty-space  round-left polywins round-right
+modules-center =  
+modules-right = alsa round-left cpu round-right empty-space mem temperature round-left time  round-right 
+font-0 = JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3       
 font-1 = JetBrainsMono Nerd Font:size=14;4
 font-2 = Material Design Icons:style=Bold:size=9;3
-;font-3 = unifont:fontformat=truetype:size=9;3
-font-3 = Font Awesome 5 Free:style=Solid:size=9;2
-font-4 = Font Awesome 5 Free:style=Regular:size=9;2
-font-5 = Font Awesome 5 Brands:style=Regular:size=9;2
-font-6 = Hack Nerd Font Mono:style=Regular:size=9;2
-
-
+font-3 = unifont:fontformat=truetype:size=9;3
 
 [module/polywins]
 type = custom/script
@@ -89,7 +83,7 @@ content = "  "
 [module/round-left]
 type = custom/text
 content = %{T3}%{T-}
-content-foreground = #2a2e36
+content-foreground = #2a2e35
 
 [module/round-right]
 type = custom/text
@@ -132,29 +126,27 @@ reverse-scroll = false
 
 format = <label-state>
 
-ws-icon-0 = I;%{F#e3a5f5}
-ws-icon-1 = II;%{F#FFFFF}
-ws-icon-2 = III;%{F#95e1d3} 
-ws-icon-3 = IV;%{F#ff9b93}     
-ws-icon-4 = V;%{F#E4BF7B}
-ws-icon-5 = VI;%{F#1db954}阮
+ws-icon-0 = 1;%{F#F9DE8F}
+ws-icon-1 = 2;%{F#ff9b93}    
+ws-icon-2 = 3;%{F#95e1d3}   
+ws-icon-3 = 4;%{F#81A1C1}
+ws-icon-4 = 5;%{F#A3BE8C}
+ws-icon-5 = 6;%{F#E4BF7B}
 
 label-separator = " "
 label-separator-background = #2a2e36
 
-;label-focused =  %icon%  
-label-focused = %icon%  
+label-focused =  %icon%  
 label-focused-foreground = ${colors.foreground}
-label-focused-padding = 2
-;label-focused-background = #464a52
-label-focused-background = #2a2e36
+label-focused-padding = 1
+label-focused-background = #464a52
 label-focused-margin = 0 
 
-label-occupied = %icon%  
+label-occupied =  %icon%  
 label-occupied-foreground = #646870  
 label-occupied-background = #2a2e36
 label-occupied-padding = 1
-label-occupied-margin = 0
+label-occupied-margin = 0 
 
 label-empty = %icon%
 label-empty-foreground =   ${colors.foreground}
@@ -168,20 +160,13 @@ label-urgent-foreground = #88C0D0
 label-urgent-background = #2a2e36
 label-urgent-padding = 1
 
-;[module/alsa]
-;type = internal/alsa
-[module/pulseaudio]
+[module/alsa]
 type = internal/pulseaudio
-
-sink = alsa_output.pci-0000_12_00.3.analog-stereo
-use-ui-max = true
-
-interval = 5
 format-volume = <label-volume> <bar-volume>
-label-volume = " "  
+label-volume = " "  
 label-volume-foreground = ${colors.foreground}
 format-muted-foreground = ${colors.foreground}
-label-muted =  MUDO
+label-muted = 󰚙
 
 format-muted-padding = 1
 
@@ -213,34 +198,26 @@ format = <label>
 format-background = #2a2e36
 format-foreground = #82868e
 
-;date = 󰥔 %H:%M%{F-}
-date =  %H:%M%{F-}
-;time-alt = 󰃭 %a, %b %d%{F-}
-time-alt =  %a, %b %d%{F-}
+date = 󰥔 %H:%M%{F-}
+time-alt = 󰃭 %a, %b %d%{F-}
 
 label = %date%%time%
 
 [module/mem]
-type = internal/memory
-interval = 2
-;format = <bar-used> <label>
-;format-background = ${colors.foreground}
-format-foreground = ${colors.foreground}
-label = "  %mb_used% -"
+type = custom/script
+exec = free -m | sed -n 's/^Mem:\s\+[0-9]\+\s\+\([0-9]\+\)\s.\+/\1/p'
+format = <label>
+format-prefix = "﬙ " 
+label = %output% MB
 label-padding = 1
-;bar-used-width = 1
-;bar-used-indicator =
-;bar-used-fill = ━
-;bar-used-empty = ┉
+format-prefix-foreground = #d19a66
 
 [module/updates]
 type = custom/script
-exec = doas xbps-install -S > /dev/null 2>&1; xbps-updates
-;exec = echo "TERROO"
+exec = sudo xbps-install -S > sudo /dev/null 2>&1; xbps-updates 
 format = <label>
 interval = 4600 
-;label =  %output%  
-label = %output%  
+label =  %output%  
 label-padding = 2
 label-foreground = #BF616A
 
@@ -256,8 +233,7 @@ type = internal/network
 interface = wlp2s0
 interval = 3.0
 format-connected =  <label-connected>
-;label-connected = "󰤪  " 
-label-connected = "  " 
+label-connected = "󰤪  " 
 label-connected-foreground = #A3BE8C 
 
 [module/battery]
@@ -340,43 +316,4 @@ format-foreground = #989cff
 type = internal/xwindow
 label = %title:0:30:...
 
-[module/title]
-type = internal/xwindow
-
-format = <label>
-format-foreground = ${color.fg-alt}
-
-label =   %title%
-label-maxlen = 30 ...
-
-[module/mpd]
-type = internal/mpd
-
-interval = 2
-
-format-online = <label-song> <icon-next>
-format-online-foreground = #C578DC
-format-online-padding = 1
-
-label-song =  "%title%-%artist%"
-label-song-maxlen = 20
-label-song-ellipsis = true
-
-label-offline = "MPD is offline"
-
-icon-play = 
-icon-pause = 
-icon-stop =  
-icon-prev = 
-icon-next = 
-
-[module/mpd_i]
-type = internal/mpd
-interval = 2
-
-format-online = <toggle>
-format-online-foreground = #E4BF7B
-format-online-padding = 2
-icon-play = 
-icon-pause = 
 
