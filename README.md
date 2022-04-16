@@ -46,7 +46,7 @@ Em breve script para instalacão.
 
 Deps:
            
-           Wmctrl
-           xprop
-           slop
-           picom
+     Wmctrl
+     xprop
+     slop
+     picom
