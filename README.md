@@ -1,5 +1,7 @@
 # dotfiles
 
+![image](https://user-images.githubusercontent.com/48987652/163693224-13b479ba-43b4-4d56-bc81-7c2e01719b23.png)
+
 CONFIGURACOES DO MEU SISTEMA!
 
 Tema e polybar clonado do https://github.com/siduck/dotfiles
@@ -11,15 +13,6 @@ Principal fonte: Jetbrains Nerd Font
 Terminal: ST
 
 IDE: Neovim + NVCHAD
-
-File manager: Nautilus + thunar
-
-![image](https://user-images.githubusercontent.com/48987652/161431162-24ba91a8-e238-4035-847d-57f00204ab95.png)
-
-Polybar:
-![image](https://user-images.githubusercontent.com/48987652/161431832-d154cfe8-a40b-4c2d-b12b-a1d770f98ef0.png)
-
-
 
 Instalar temas em:
 
