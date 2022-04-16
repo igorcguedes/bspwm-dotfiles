@@ -1,4 +1,5 @@
 # dotfiles
+
 CONFIGURACOES DO MEU SISTEMA!
 
 Tema e polybar clonado do https://github.com/siduck/dotfiles
