@@ -2,39 +2,36 @@
 
 ![image](https://user-images.githubusercontent.com/48987652/163693224-13b479ba-43b4-4d56-bc81-7c2e01719b23.png)
 
-CONFIGURACOES DO MEU SISTEMA!
+Memory Usage in idle: 260~350
+![image](https://user-images.githubusercontent.com/48987652/163693269-ab660607-3262-4526-9e02-eeea5a8ddd0d.png)
 
-Tema e polybar clonado do https://github.com/siduck/dotfiles
 
-Editado e adaptado ao meu uso.
+My system configs!
 
-Principal fonte: Jetbrains Nerd Font
+Theme and polybar from: https://github.com/siduck/dotfiles
+
+Main font: Jetbrains Nerd Font
 
 Terminal: ST
 
 IDE: Neovim + NVCHAD
 
-Instalar temas em:
+Install themes in:
 
     /usr/share/themes
 
-Icones:
+Icons:
 
     /usr/share/icons
 
-Fontes:
+Fonts:
 
-Apague as antigas para não ter risco de duplicar.
+Delete old fonts & copy the new one
 
-    rm -rf /usr/share/fonts
+    rm -rf /usr/share/fonts & cp /dotfiles/fonts usr/share/fonts
 
-Copie as novas:
 
-    cp /dotfiles/fonts usr/share/fonts
-
-Atualize o cache de fontes:
-
-Em breve script para instalacão.
+Update cache:
 
      fc-cache -fv
 
