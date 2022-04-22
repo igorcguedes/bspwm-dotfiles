@@ -61,7 +61,7 @@ wm-restack = bspwm
 
 modules-left = round-left bspwm round-right empty-space  round-left polywins round-right
 modules-center =  
-modules-right = alsa round-left cpu round-right empty-space mem temperature round-left time  round-right 
+modules-right = pulseaudio round-left cpu round-right empty-space mem temperature round-left time  round-right powermenu 
 font-0 = JetBrainsMono Nerd Font:style=Bold:pixelsize=9;3       
 font-1 = JetBrainsMono Nerd Font:size=14;4
 font-2 = Material Design Icons:style=Bold:size=9;3
@@ -126,10 +126,10 @@ reverse-scroll = false
 
 format = <label-state>
 
-ws-icon-0 = 1;%{F#F9DE8F}
-ws-icon-1 = 2;%{F#ff9b93}    
-ws-icon-2 = 3;%{F#95e1d3}   
-ws-icon-3 = 4;%{F#81A1C1}
+ws-icon-0 = 1;%{F#e3a5f5}
+ws-icon-1 = 2;%{F#e3a5f5}   
+ws-icon-2 = 3;%{F#ff9b93}      
+ws-icon-3 = 4;%{F#95e1d3}
 ws-icon-4 = 5;%{F#A3BE8C}
 ws-icon-5 = 6;%{F#E4BF7B}
 
@@ -160,35 +160,21 @@ label-urgent-foreground = #88C0D0
 label-urgent-background = #2a2e36
 label-urgent-padding = 1
 
-[module/alsa]
+;[module/alsa]
+;type = internal/alsa
+[module/pulseaudio]
 type = internal/pulseaudio
+
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+use-ui-max = true
+
+interval = 5
 format-volume = <label-volume> <bar-volume>
-label-volume = " "  
+label-volume = " "  
 label-volume-foreground = ${colors.foreground}
 format-muted-foreground = ${colors.foreground}
-label-muted = 󰚙
+label-muted =  MUDO
 
-format-muted-padding = 1
-
-bar-volume-width = 10
-bar-volume-foreground-0 = #61afef
-bar-volume-foreground-1 = #61afef
-bar-volume-foreground-2 = #61afef
-bar-volume-foreground-3 = #61afef
-bar-volume-foreground-4 = #61afef
-bar-volume-foreground-5 = #61afef
-bar-volume-foreground-6 = #61afef
-bar-volume-gradient = false
-bar-volume-indicator = 
-bar-volume-indicator-foreground = #61afef
-bar-volume-indicator-font = 2
-bar-volume-fill = ━ 
-bar-volume-fill-foreground = #61afef
-bar-volume-fill-font = 2
-bar-volume-empty = ━
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = #565c64
-format-volume-padding = 2
 
 [module/time]
 type = internal/date
@@ -225,7 +211,7 @@ label-foreground = #BF616A
 type = custom/text 
 content =" " 
 content-padding = 2
-click-left = doas zzz &
+click-left = bash /home/igor/.config/rofi/powermenu/powermenu.sh
 content-foreground = #f25287
 
 [module/wlan]
