@@ -176,10 +176,7 @@ generate_window_list() {
       Chromium-browser) w_name='' ;;
       TelegramDesktop) w_name=' ' ;;
       Pcmanfm) w_name='' ;;
-      SimpleScreenRecorder) w_name='' ;;
-      Blue-recorder) w_name='' ;;
-      Firefox) w_name='' ;;
-      figma-linux) w_name='' ;;
+      firefox) w_name='' ;;
       *) w_name="$cls" ;;
       esac
       ;;
