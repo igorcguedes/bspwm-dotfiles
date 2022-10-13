@@ -59,7 +59,7 @@ border-bottom-color = ${colors.background}
 line-size = 1
 wm-restack = bspwm
 
-modules-left = round-left bspwm round-right empty-space  round-left round-right
+modules-left = round-left bspwm round-right empty-space  round-left polywins round-right
 modules-center = 
 modules-right = pulseaudio round-left cpu round-right empty-space mem temperature empty-space round-left time round-right powermenu 
 font-0 = JetBrainsMono Nerd Font:style=Bold:pixelsize=10;3
@@ -130,7 +130,7 @@ reverse-scroll = false
 
 format = <label-state>
 
-ws-icon-0 = home;%{F#1793d1}
+ws-icon-0 = home;%{F#DA70D6}
 ws-icon-1 = www;%{F#F9DE8F}
 ws-icon-2 = dev;%{F#e3a5f5}          
 ws-icon-3 = play;%{F#A3BE8C}
