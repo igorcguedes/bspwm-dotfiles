@@ -23,7 +23,7 @@ bspc config normal_border_color "#353b45"
 #send to home desktop
 bspc rule --add Pcmanfm                    desktop='home' follow=on
 #send to www desktop
-bspc rule --add firefox                    desktop='www' follow=on
+bspc rule --add firefox-esr                desktop='www' follow=on
 #send to dev desktop
 bspc rule --add St                         desktop='dev' follow=on
 bspc rule --add gvim                       desktop='dev' follow=on
@@ -37,12 +37,12 @@ bspc rule --add steam                      desktop='play' --one-shot follow=on
 
 #send to moni desktop
 bspc rule --add discord                    desktop='moni' follow=off
-bspc rule --add Microsoft Teams - Preview  desktop='moni' follow=off 
+bspc rule --add Microsoft Teams - Preview  desktop='moni' follow=off
 bspc rule --add Spotify                    desktop='moni' follow=off
-# autostart up applications 
+# autostart up applications
 ~/.config/polybar/launch.sh &
-picom & 
+picom &
 feh --bg-fill ~/pictures/neon.png &
 xrdb merge ~/.Xresources &
 flameshot &
-sxhkd 
+sxhkd
