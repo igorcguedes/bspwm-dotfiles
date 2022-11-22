@@ -1,8 +1,9 @@
 # dotfiles
 
+![image](https://user-images.githubusercontent.com/48987652/203334329-3a01032b-6aa5-4e6f-9d3e-5c6625766655.png)
+
 
 Memory Usage in idle: 260~350
-
 
 My system configs!
 
@@ -10,7 +11,7 @@ Main font: Jetbrains Nerd Font
 
 Terminal: foot
 
-IDE: Neovim + NVCHAD
+IDE: Custom Neovim
 
 Install themes in:
 
