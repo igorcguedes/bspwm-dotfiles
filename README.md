@@ -12,7 +12,7 @@ Theme and polybar from: https://github.com/siduck/dotfiles
 
 Main font: Jetbrains Nerd Font
 
-Terminal: ST
+Terminal: foot
 
 IDE: Neovim + NVCHAD
 
@@ -34,10 +34,3 @@ Delete old fonts & copy the new one
 Update cache:
 
      fc-cache -fv
-
-Deps:
-           
-     Wmctrl
-     xprop
-     slop
-     picom
