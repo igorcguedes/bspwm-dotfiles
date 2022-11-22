@@ -1,18 +1,17 @@
-# dotfiles
-
-![image](https://user-images.githubusercontent.com/48987652/163693224-13b479ba-43b4-4d56-bc81-7c2e01719b23.png)
+# dotfiles!
+[314421591_673673077708601_292377800392519086_n](https://user-images.githubusercontent.com/48987652/203214856-3bca64d8-ce02-4a50-bf1c-4cecd6109cc4.jpg)
 
 Memory Usage in idle: 260~350
-![image](https://user-images.githubusercontent.com/48987652/163693269-ab660607-3262-4526-9e02-eeea5a8ddd0d.png)
+
 
 
 My system configs!
 
 Main font: Jetbrains Nerd Font
 
-Terminal: foot
+Terminal: kitty
 
-IDE: Neovim + NVCHAD
+IDE: Custom Neovim 
 
 Install themes in:
 
