@@ -32,3 +32,7 @@ Update cache:
 
      fc-cache -fv
 
+When using console-based login, edit /etc/pam.d/login:
+
+Add auth optional pam_gnome_keyring.so at the end of the auth section and session optional pam_gnome_keyring.so auto_start at the end of the session section. 
+Add password optional pam_gnome_keyring.so to the end of /etc/pam.d/passwd
