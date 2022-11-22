@@ -24,23 +24,18 @@ PS2="\[\033[32m\]  > \[\033[0m\]"
 export EDITOR='nvim'
 export VISUAL='nvim'
 
-#my aliases emerge
-alias ea="doas emerge --ask --autounmask-write"
-alias uns="doas emerge --deselect"
-alias ed="doas emerge --depclean"
-alias etc="doas etc-update"
-alias update="doas emerge --ask --verbose --update --deep --newuse @world"
-
-
 #my aliases
+alias xi='sudo xbps-install'
+alias xr='sudo xbps-remove -Ro'
 alias del="rm -r"
 alias v="nvim"
-
+alias xdeb="xdeb -Sde"
 #git
 alias gl="git clone"
 
 
-#sfdx
-export PATH=/bin/sfdx/bin:$PATH
-
+#exports
+PATH=~/.npm-global/bin:$PATH
+#SFDX
+alias createp="sfdx force:project:create --projectname Projeto --manifest"
 
