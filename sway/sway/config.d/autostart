@@ -1,9 +1,0 @@
-exec_always sway output HDMI-A-3 mode 1600x900 transform flipped-270 
-# Notifications
-exec mako
-# Bar
-exec_always waybar
-#screenshot
-
-# Bling
-exec_always --no-startup-id autotiling

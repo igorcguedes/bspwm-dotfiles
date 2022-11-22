@@ -1,9 +1,0 @@
-### Output configuration
-output DP-2 mode 1920x1080@144.000Hz
-output DP-2 bg ~/Pictures/wall/8ba25cc7a0ce2a5560872a1f81ddcd7b6b914edar1-2048-1325v2_uhq.jpg stretch
-output HDMI-A-3 bg ~/Pictures/wall/8ba25cc7a0ce2a5560872a1f81ddcd7b6b914edar1-2048-1325v2_uhq.jpg stretch
-
-workspace 1 output HDMI-A-3
-workspace 2 output DP-2
-
-

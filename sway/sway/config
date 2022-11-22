@@ -1,2 +1,0 @@
-exec export $(dbus-launch)
-include $HOME/.config/sway/config.d/*
