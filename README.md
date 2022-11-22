@@ -8,8 +8,6 @@ Memory Usage in idle: 260~350
 
 My system configs!
 
-Theme and polybar from: https://github.com/siduck/dotfiles
-
 Main font: Jetbrains Nerd Font
 
 Terminal: foot
@@ -34,3 +32,4 @@ Delete old fonts & copy the new one
 Update cache:
 
      fc-cache -fv
+
